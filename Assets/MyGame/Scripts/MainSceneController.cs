@@ -25,7 +25,7 @@ public class MainSceneController : MonoBehaviour
 
     public void GetValues()
     {
-        if(Regex.IsMatch(inputFieldTermA.text, @"^\d+$") && Regex.IsMatch(inputFieldTermB.text, @"^\d+$")) 
+        /*f(Regex.IsMatch(inputFieldTermA.text, @"^\d+$") && Regex.IsMatch(inputFieldTermB.text, @"^\d+$")) 
         //überprüft ob in den Inputboxxen ein Zahlenwert steht
         {
             termA = int.Parse(inputFieldTermA.text);
@@ -35,9 +35,33 @@ public class MainSceneController : MonoBehaviour
         {
             termA = 0;
             termB = 0;
+        }*/
+
+        try
+        {
+            termA = int.Parse(inputFieldTermA.text);
         }
-        CheckAddition(termA, termB); //ruft die Additionsfunktion auf
+        catch (System.Exception)
+        {
+
+            inputFieldTermA.GetComponent<InputField>().image.color = Color.red;
+            inputFieldTermA.GetComponent<InputField>().placeholder.GetComponent<Text>().text = "hallo";
+            inputFieldTermA.text = "";
+        }
+
+        try
+        {
+            termB = int.Parse(inputFieldTermB.text);
+        }
+        catch (System.Exception)
+        {
+
+            throw;
+        }
+
+        txtResult.text = CheckAddition(termA, termB).ToString(); //ruft die Additionsfunktion auf
     }
+        
 
     public void ResetAll()
     {
@@ -49,6 +73,6 @@ public class MainSceneController : MonoBehaviour
     }
     void Update()
     {
-
+        
     }
 }
