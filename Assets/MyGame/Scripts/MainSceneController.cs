@@ -45,7 +45,7 @@ public class MainSceneController : MonoBehaviour
         {
 
             inputFieldTermA.GetComponent<InputField>().image.color = Color.red;
-            inputFieldTermA.GetComponent<InputField>().placeholder.GetComponent<Text>().text = "hallo";
+            inputFieldTermA.GetComponent<InputField>().placeholder.GetComponent<Text>().text = "falsch";
             inputFieldTermA.text = "";
         }
 
@@ -56,7 +56,9 @@ public class MainSceneController : MonoBehaviour
         catch (System.Exception)
         {
 
-            throw;
+            inputFieldTermB.GetComponent<InputField>().image.color = Color.red;
+            inputFieldTermB.GetComponent<InputField>().placeholder.GetComponent<Text>().text = "falsch";
+            inputFieldTermB.text = "";
         }
 
         txtResult.text = CheckAddition(termA, termB).ToString(); //ruft die Additionsfunktion auf
@@ -70,6 +72,11 @@ public class MainSceneController : MonoBehaviour
         inputFieldTermB.text = "";
         termA = 0;
         termB = 0;
+        Color newColor = new Color(288, 167, 162, 255);
+        inputFieldTermA.GetComponent<InputField>().image.color = newColor;
+        inputFieldTermB.GetComponent<InputField>().image.color = newColor;
+        inputFieldTermA.GetComponent<InputField>().placeholder.GetComponent<Text>().text = "Ganze Zahl eingeben";
+        inputFieldTermB.GetComponent<InputField>().placeholder.GetComponent<Text>().text = "Ganze Zahl eingeben";
     }
     void Update()
     {
