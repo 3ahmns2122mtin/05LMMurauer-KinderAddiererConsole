@@ -17,8 +17,8 @@ https://3ahmns2122mtin.github.io/05LMMurauer-KinderAddiererConsole/
 Unity 2020.1.18f1
 
 ### Drittmaterial: 
-Bild: EfpzslPU0AAimpy
-Audio: He Mele No Lilo - Soundscape (Sound Redesign)
+- Bild: EfpzslPU0AAimpy
+- Audio: He Mele No Lilo - Soundscape (Sound Redesign)
 
 ### Anforderungsliste:  
 - Ein funktionierender Addierer zweier Zahlen
