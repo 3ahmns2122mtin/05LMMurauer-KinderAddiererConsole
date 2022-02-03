@@ -11,7 +11,7 @@ WebGL Referenzauflösung (960x600)
 
 ### Visuelle Einblicke in das Projekt: 
 
-https://3ahmns2122mtin.github.io/CKloesch-KinderAddiererConsole/
+https://3ahmns2122mtin.github.io/05LMMurauer-KinderAddiererConsole/
 
 ### Notwendiges für die Ausführung: 
 Unity 2020.1.18f1
